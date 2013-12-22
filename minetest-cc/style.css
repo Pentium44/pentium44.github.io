@@ -68,3 +68,5 @@ body {
 
 a { color: white; }
 a:hover { text-decoration: none; }
+
+#screenshot { display: block; margin: auto; width: 730px; }
