@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
-<title>Minetest-CC</title>
+<title>Minetest-CC - Download</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no">
 <link rel="stylesheet" type="text/css" href="style.css" />
@@ -10,25 +10,25 @@
 	<!-- Nav Header -->
 	<div class="head">
 		<div id="title">
-			Minetest-CC - Screenshots
+			Minetest-CC - Get it!
 		</div>
 		<div id="nav">
 			<a href="index.html">Home</a> /
-			<a href="download.html">Download</a>
+			<a href="download.html">Download</a> 
 		</nav>
 	</div>
 	
 		<!-- Page Content -->
 		<div class="content">
-			<div id="header-top">Screenshots</div>
-			<img src="img/minetest-cc-cactus.png" id="screenshot" alt="Minetest-CC 1.1-Dev" title="Minetest-CC 1.1-Dev" />
+			<div id="header">Downloads</div>
+			Minetest-CC is only available on GNU/Linux systems due to cross compiling 
+			issues via mingw.<br />
 			
-			<div id="header">Contact</div>
-			If you have any questions for Minetest-CC developers, please email us
-			with questions, comments, and ideas.<br />
-			Chris Dorman, Main developer : <a href="mailto:cddo@riseup.net">cddo@riseup.net</a><br />
-			<br />
-			IRC Development channel: #minetest-cc @ irc.freenode.net
+			<div id="header">Source Code</div>
+			If you would like to browse the source code for Minetest-CC, you can 
+			browse the software source via Github&trade;:<br />
+			&bull; <a href="https://github.com/crazycoder13/Minetest-CC">Minetest-CC (Github)</a><br />
+			
 		</div>
 	
 	<!-- Page Footer -->
