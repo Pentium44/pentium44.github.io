@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Freon Linux ~ FAQ</title>
+	<link rel="stylesheet" type="text/css" href="ctn/style.css">
+</head>
+<body>
+<div id="navcontainer">
+	<div id="navbar"><!--
+	--><a href="index.html">Home</a><!--
+	--><a href="get.html">Get</a><!--
+	--><a href="contact.html">Contact</a><!--
+	--><a href="faq.html">FAQ</a><!--
+	--><a href="dev.html">Dev</a><!--
+	--></div>
+</div>
+<div id="contentcontainer">
+	<div id="content">
+		<h1>Freon Linux: Frequently asked questions</h1>
+		Freon Linux is relatively new to the World Wide Web. Fortunately, you can find a few steps in the right direction on how to install packages, and the operating system itself in just minutes. If you can't seem to find an answer to your question among the website, feel free to contact us!
+		
+		<br /> <br />
+		<h3>What is Freon Linux used for?</h3>
+		Freon Linux is aimed toward being affective on older hardware and in which can be used as a server operating system after Freon is more developed.
+		<h3>Where's the 32bit live builds?</h3>
+		Unfortunately, Freon builds are only 64bit as of the time being but cross compiling methods are currently being developed.
+		<h3>Does Freon have it's own toolchain?</h3>
+		Beside side utilities, Freon does have GCC packages (7.1.0) in the repository. You can install GCC using thaw.
+		<h3>How does Freon Linux's package manager work?</h3>
+		Freon Linux's package manager is a very straight forward script that identifies whether the packages exist in the repo, checks and installs package dependencies, and installs packages. However, there are search abilities in thaw too which allow you to physically search for a package from the command prompt.
+		<div class="codebox">
+			<code>
+Usage:<br />
+thaw get-install &lt;package&gt; : Install a package<br />
+thaw update-list           : Update system package list<br />
+thaw search &lt;query&gt;        : Search for a package in the database<br />
+			</code>
+		</div>
+		For example, lets say someone needed to install GCC. An example using thaw would look something like this:
+		<div class="codebox">
+			<code># thaw get-install gcc</code>
+		</div>
+		
+		<h3>How do you install Freon Linux?</h3>
+		Freon Linux is still in development, so having some knowledge of a GNU/Linux based system is crucial. To install Freon, the builds are shipped with a Freon specific script called freezedry:
+		<div class="codebox">
+			<code>
+FreezeDry: Freon Installer ~ Install Freon Linux to a device<br />
+Usage: <br />
+freezedry install &lt;path to config file&gt;: Install Freon Linux<br />
+freezedry config &lt;path to config&gt;      : Create a default config	<br />	
+			</code>
+		</div>
+		First step in installing Freon Linux is to generate an installion configuration file: 
+		<div class="codebox">
+			<code># freezedry config /root/install.conf</code>
+		</div>
+		
+		This file contains information on where and how Freon Linux is going to be installed. Here's a peak at the default installation config:
+		<div class="codebox">
+			<code>
+# cat /root/install.conf<br />
+### FreezeDry configuration file ###<br />
+# Installation media device (Hardware with Freon's system files)<br />
+# Examples:<br />
+#    CDROM: /dev/cdrom<br />
+#    USB: /dev/sda1<br />
+INSTMEDIA="/dev/cdrom"<br />
+<br />
+# Installation device (Hardware used for the Freon installation)<br />
+# Example: /dev/hda<br />
+DEVICE="/dev/hda"<br />
+<br />
+# Device partition (Used for the Freon installation)<br />
+# Example: /dev/hda1: First partition of device hda<br />
+DEVPARTITION="/dev/hda1"			<br />
+			</code>
+		</div>
+		After using vi to tweak the generated config file, you use the install parameter in freezedry to install the operating system: 
+		<div class="codebox">
+			<code># freezedry install /root/install.conf</code>
+		</div>
+		If anything fails, the script will exit and you will be notified
+	</div>
+	<div id="footer">
+		&copy; Chris Dorman, 2017 LGPLv2
+	</div>
+</div>
+
+</body>
+</html>
